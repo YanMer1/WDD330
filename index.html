@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather Wise</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+          <picture>
+            <img src="images/weatherwise_logo.png" alt="Weather Wise">
+          </picture>
+        </div>
+      </header>
     <main class="home">
-        <h2>Weather App</h2>
         <p>
           Choose the location that you wish to know the weather.
         </p>
@@ -25,11 +33,25 @@
             <div class="grid">
 
         </div>
-          <div id="weather-info"></div>
-          <div id="weather-alert"></div>
+            <div class="weather alert hidden" id="weather-alert"></div>
+            <div class="weather" id="weather-info"></div>
         </div>
     </main>
-    <script src="app.js"></script>
+    <footer>
+        <div class="info">
+          <p>&copy;<span id="curYr"></span> Weather Wise | Yannick Merino | WDD 330 - Final Project</p>
+        </div>
+      </footer>
+    <script>
+        function showAlert() {
+        document.getElementById("weather-alert").classList.remove("hidden");
+        }
+
+        function hideAlert() {
+        document.getElementById("weather-alert").classList.add("hidden");
+      }
+    </script>
+    
 </body>
 
 </html>

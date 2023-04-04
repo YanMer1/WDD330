@@ -27,7 +27,7 @@ input:focus {
 }
 .weather {
     text-align: center;
-    font-size: 2rem;
+    font-size: 22px;
 }
 .weather h2 {
     margin-bottom: 0;
@@ -84,4 +84,106 @@ input:focus {
 #search-btn:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.logo img {
+  width: 150px;
+  float: center;
+  padding-top: 10%;
+}
+
+.weather:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.weather {
+  margin: 10px;
+  padding: 10px;
+  color: #000;
+  gap: 10px;
+}
+
+.weather div,
+.weather div:first-child img {
+  padding: 10px;
+}
+
+.weather:last-child div:nth-child(odd),
+.weather:last-child div:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.weather:last-child div {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
+
+.weather div:first-child {
+  grid-row: 1/4;
+}
+
+.home .cards .grid,
+.cards p {
+  padding: 10px 0;
+}
+
+.home .cards .grid {
+  width: 95%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.alert button:hover {
+  color: #5CDB95;
+}
+
+.alert button {
+  border: none;
+  font-size: 25px;
+  position: absolute;
+  width: 40px;
+  right: 10px;
+}
+
+.alert div {
+  position: relative;
+}
+
+.alert p {
+  font-size: 14px;
+}
+
+.alert {
+  height: 100%;
+}
+
+.daily h2 {
+  font-size: 20px;
+  grid-column: 1/4;
+}
+
+.daily {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 150px 50px 1fr;
+  grid-template-rows: auto 70px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.weather:last-child div:first-child {
+  padding: 20% 0;
+}
+
+.daily p {
+  margin: auto 0;
+}
+
+.daily p:nth-child(4) {
+  text-align: left;
 }

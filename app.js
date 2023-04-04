@@ -32,6 +32,7 @@ function fetchWeather() {
     .catch((error) => {
       console.error(error);
       displayAlert.innerHTML = "Unable to retrieve weather information.";
+      showAlert();
     });
 }
 
@@ -71,7 +72,7 @@ function createDailyCards(weatherData) {
 
         const d = new Date(+new Date() + 86400000 * i);
         h2.innerHTML = `${weekday[d.getDay()]}, ${month[d.getMonth()]} ${d.getDate()} ${d.getFullYear()}`;
-        img.setAttribute("src", `https://yanmer1.github.io//wdd330/final/images/weatherIcons/${weatherData.daily[i].weather[0].icon}.png`);
+        img.setAttribute("src", `https://yanmer1.github.io//WDD330/images/weatherIcons/${weatherData.daily[i].weather[0].icon}.png`);
         img.setAttribute("width", "75");
 
         // Capitalize first letter of each word.
@@ -108,7 +109,7 @@ function currentWeather(weatherData) {
   let p3 = document.createElement("p");
 
   h2.innerHTML = `Current Weather`;
-  img.setAttribute("src",`https://yanmer1.github.io//wdd330/final/images/weatherIcons/${weatherData.current.weather[0].icon}.png`);
+  img.setAttribute("src",`https://yanmer1.github.io//WDD330/images/weatherIcons/${weatherData.current.weather[0].icon}.png`);
 
   // Capitalize first letter of each word.
   const descweather = weatherData.current.weather[0].description;
@@ -142,7 +143,7 @@ function currentWeather(weatherData) {
   let p3 = document.createElement("p");
 
   h2.innerHTML = `Current Weather`;
-  img.setAttribute("src",`https://yanmer1.github.io//wdd330/final/images/weatherIcons/${weatherData.current.weather[0].icon}.png`);
+  img.setAttribute("src",`https://yanmer1.github.io//WDD330/images/weatherIcons/${weatherData.current.weather[0].icon}.png`);
 
   // Capitalize first letter of each word.
   const descweather = weatherData.current.weather[0].description;
@@ -216,3 +217,15 @@ async function apiFetch(apiURL) {
     console.log(error);
   }
 }
+
+let date = new Date();
+let year = date.getFullYear();
+document.getElementById("curYr").innerHTML = year;
+// select the elements to manipulate (output to)
+const datefield = document.querySelector(".date");
+
+// derive the current date using a date object
+const now = new Date();
+const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+	now
+);
