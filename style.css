@@ -2,6 +2,11 @@
 * {
     box-sizing: border-box;
 }
+
+main {
+  text-align: center;
+}
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -156,6 +161,7 @@ input:focus {
 
 .alert {
   height: 100%;
+  width: auto;
 }
 
 .daily h2 {
@@ -186,4 +192,16 @@ input:focus {
 
 .daily p:nth-child(4) {
   text-align: left;
+}
+
+.weather.alert {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
