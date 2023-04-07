@@ -10,7 +10,7 @@ main {
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background-color: linear-gradiet(300deg, #757b87, #909d9d);
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,4 +204,40 @@ input:focus {
 
 .hidden {
   display: none;
+}
+
+
+/* Responsive styles using media queries */
+@media (max-width: 768px) {
+  input {
+      min-width: 100%;
+  }
+
+  .logo img {
+      width: 100px;
+  }
+
+  .weather {
+      margin: 10px;
+      padding: 10px;
+      color: #000;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .weather div,
+  .weather div:first-child img {
+      padding: 10px;
+  }
+
+  .weather:last-child div:nth-child(odd),
+  .weather:last-child div:nth-child(2) {
+      margin-bottom: 10px;
+  }
+
+  .weather:last-child div {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 }
